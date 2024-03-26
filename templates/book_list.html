@@ -1,0 +1,44 @@
+<!-- templates/book_list.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{ title }}</title>
+    <!-- styling for flask -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='style.css')}}"
+    />
+    <!-- put icon for head -->
+    <link
+      rel="shortcut icon"
+      href="{{ url_for('static', filename='images/books.png')}}"
+      type="image/x-icon"
+    />
+    <!-- normal styling  -->
+    <link rel="stylesheet" href="temporary-style.css" />
+  </head>
+  <body>
+    <h2>{{ title }}</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>Author</th>
+          <th>Year</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for book in books %}
+        <tr>
+          <td><a href="/book/{{ book.id }}">{{ book.title }}</a></td>
+          <td>{{ book.author }}</td>
+          <td>{{ book.year }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </body>
+</html>
