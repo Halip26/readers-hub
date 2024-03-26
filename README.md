@@ -1,5 +1,4 @@
-
-# Book List - A Flask Application
+# Readers Hub - A Book List Flask Application
 
 This is a simple Flask application that demonstrates rendering a list of books and individual book details.
 
@@ -51,3 +50,8 @@ The project consists of the following files:
 ### Contributing
 
 Feel free to fork the repository and submit pull requests with improvements or additional features.
+
+## LICENSE
+
+Check the license here:
+[LICENSE](LICENSE)
